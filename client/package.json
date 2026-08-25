@@ -1,0 +1,19 @@
+{
+  "name": "multiverse-e2ee-client",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "esbuild src/messaging-client.js --bundle --sourcemap --outfile=dist/messaging-client.js",
+    "dev": "esbuild src/messaging-client.js --bundle --sourcemap --outfile=dist/messaging-client.js --watch"
+  },
+  "dependencies": {
+    "libsignal-protocol": "^0.0.2",
+    "idb": "^7.0.1",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.18.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

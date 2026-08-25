@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Multiverse Portal - E2EE Demo</title>
+</head>
+<body>
+<h1>Multiverse Portal - E2EE Demo (Inline)</h1>
+<p>This file is an inline demo that includes the secure chat component. For production use, include the built client bundle instead.</p>
+
+<!-- The real production HTML is your original file; this demo provides an inline example with the E2EE chat appended. -->
+
+<!-- Chat toggle and panel for quick testing -->
+<button id="demo_chatToggle">Secure Chat</button>
+<div id="demo_chatPanel" style="display:none;position:fixed;right:20px;bottom:20px;width:360px;background:#111;color:#fff;padding:12px;border-radius:8px">
+  <div style="font-weight:700;margin-bottom:8px">Secure Chat (Demo)</div>
+  <div><input id="demo_apiBase" placeholder="Backend base URL" style="width:100%"/></div>
+  <div style="margin-top:6px"><input id="demo_jwt" placeholder="JWT" style="width:100%"/></div>
+  <div style="margin-top:6px"><input id="demo_myUser" placeholder="My user id" style="width:49%"/><input id="demo_myDevice" placeholder="My device" style="width:49%"/></div>
+  <div style="margin-top:6px"><input id="demo_peerUser" placeholder="Peer user id" style="width:49%"/><input id="demo_peerDevice" placeholder="Peer device" style="width:49%"/></div>
+  <div style="margin-top:6px"><button id="demo_register">Register</button><button id="demo_connect">Connect WS</button></div>
+  <div id="demo_log" style="height:200px;overflow:auto;background:#000;margin-top:8px;padding:6px"></div>
+  <div style="display:flex;gap:6px;margin-top:6px"><input id="demo_input" style="flex:1"/><button id="demo_send">Send</button></div>
+</div>
+
+<script>
+document.getElementById('demo_chatToggle').addEventListener('click', ()=>{
+  const p = document.getElementById('demo_chatPanel'); p.style.display = p.style.display === 'none' ? 'block' : 'none';
+});
+
+// This inline demo intentionally small. Use the client bundle for full features.
+</script>
+</body>
+</html>
